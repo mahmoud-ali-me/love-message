@@ -9,8 +9,12 @@
 </head>
 
 <body>
-  <!-- Floating Hearts Background -->
+  <!-- Floating Hearts & Images Background -->
   <div class="hearts-container" id="heartsContainer"></div>
+  <div class="floating-images" id="floatingImages"></div>
+
+  <!-- Animated Stars Background -->
+  <div class="stars-container" id="starsContainer"></div>
 
   <!-- Main Content -->
   <div class="main-content">
@@ -19,86 +23,71 @@
       <div class="name-box animate-fade-in">
         <h1 class="name">Mahmoud</h1>
       </div>
-      <div class="heart-divider">
-        <span class="big-heart">❤️</span>
+      <div class="love-center animate-fade-in delay-1">
+        <span class="love-word">Love</span>
+        <span class="heart-icon">♥️</span>
       </div>
-      <div class="name-box animate-fade-in delay-1">
+      <div class="name-box animate-fade-in delay-2">
         <h1 class="name">Shahd</h1>
       </div>
     </div>
 
     <!-- Special Date -->
-    <div class="date-section animate-fade-in delay-2">
+    <div class="date-section animate-fade-in delay-3">
       <div class="date-label">اليوم الذي غيّر حياتي</div>
       <div class="special-date">28 / 11 / 2024</div>
     </div>
 
-    <!-- Love Message -->
-    <div class="message-section animate-fade-in delay-3">
-      <div class="message-card">
-        <div class="message-icon">💕</div>
-        <p class="message-text">
-          في هذا اليوم المميز، بدأت قصة حب لا تُنسى...<br>
-          يوم غيّر كل شيء وجعل الحياة أجمل<br>
-          معكِ كل لحظة هي ذكرى ثمينة<br>
-          وكل يوم هو بداية جديدة مليئة بالحب والسعادة
-        </p>
-        <div class="message-signature">
-          <span class="signature-text">بكل الحب،</span>
-          <span class="signature-name">Mahmoud</span>
+    <!-- Poem Section -->
+    <div class="poem-section animate-fade-in delay-4">
+      <p class="poem-line">يَا فِتْنَةً بِالحُبِّ قَلْبِي قَدْ مَلَكْ</p>
+      <p class="poem-line">هَلْ أَنْتِ مِنْ حَوَّاءَ وَآدَمَ أَمْ مَلَكْ</p>
+    </div>
+
+    <!-- Actions Section -->
+    <div class="actions-section animate-fade-in delay-5">
+      <!-- Envelope -->
+      <div class="action-item">
+        <div class="arrow-pointer" id="arrowPointer">
+          <svg width="60" height="60" viewBox="0 0 60 60">
+            <path d="M30 5 L30 40 M30 40 L20 30 M30 40 L40 30" stroke="url(#arrowGradient)" stroke-width="3.5"
+              fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="arrow-text">رسالتي لكِ ♥️</div>
         </div>
-      </div>
-    </div>
-
-    <!-- Quote Section -->
-    <div class="quote-section animate-fade-in delay-4">
-      <div class="quote-mark">"</div>
-      <p class="quote-text">
-        أنتِ السبب في كل ابتسامة<br>
-        وأنتِ البداية الجميلة لكل يوم
-      </p>
-      <div class="quote-mark closing">"</div>
-    </div>
-
-    <!-- Envelope Section with Arrow -->
-    <div class="envelope-section animate-fade-in delay-5">
-      <!-- Animated Arrow Pointer -->
-      <div class="arrow-pointer" id="arrowPointer">
-        <svg width="60" height="60" viewBox="0 0 60 60">
-          <path d="M30 5 L30 40 M30 40 L20 30 M30 40 L40 30" stroke="url(#arrowGradient)" stroke-width="3.5" fill="none"
-            stroke-linecap="round" stroke-linejoin="round" />
-          <defs>
-            <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <div class="arrow-text">اضغط على الظرف ♥️</div>
-      </div>
-
-      <!-- Envelope Icon -->
-      <div class="envelope-wrapper" onclick="openEnvelope()">
-        <div class="envelope" id="envelope">
-          <div class="envelope-back"></div>
-          <div class="envelope-flap" id="envelopeFlap">
-            <div class="envelope-seal">
-              <span class="seal-heart">💕</span>
+        <div class="envelope-wrapper" onclick="openEnvelope()">
+          <div class="envelope" id="envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-flap" id="envelopeFlap">
+              <div class="envelope-seal">
+                <span class="seal-heart">♥️</span>
+              </div>
             </div>
+            <div class="envelope-front"></div>
+            <div class="envelope-body"></div>
           </div>
-          <div class="envelope-front"></div>
-          <div class="envelope-body"></div>
         </div>
-        <div class="envelope-label">رسالة خاصة جداً</div>
       </div>
-    </div>
 
-    <!-- Interactive Hearts Button -->
-    <div class="interaction-section animate-fade-in delay-6">
-      <button class="hearts-button" onclick="createHeartExplosion()">
-        <span class="button-icon">💖</span>
-        <span class="button-text">اضغط هنا</span>
-      </button>
+      <!-- Memory Book -->
+      <div class="action-item">
+        <div class="book-wrapper" onclick="openBook()">
+          <div class="book">
+            <div class="book-cover">
+              <div class="book-title">ذكرياتنا</div>
+              <div class="book-icon">📖</div>
+            </div>
+            <div class="book-pages"></div>
+          </div>
+          <div class="book-label">كتاب الذكريات</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -112,7 +101,7 @@
         </button>
 
         <div class="letter-header">
-          <h1 class="letter-title">💕 رسالة حب خاصة 💕</h1>
+          <h1 class="letter-title">♥️ رسالة حب خاصة ♥️</h1>
           <div class="letter-date">28 نوفمبر 2024</div>
         </div>
 
@@ -199,6 +188,31 @@
     </div>
   </div>
 
+  <!-- Memory Book Modal -->
+  <div class="book-modal" id="bookModal">
+    <div class="book-overlay" onclick="closeBook()"></div>
+    <div class="book-container">
+      <button class="close-book" onclick="closeBook()">✕</button>
+      <div class="flip-book" id="flipBook">
+        <!-- Cover -->
+        <div class="page cover">
+          <div class="page-content">
+            <h1 class="cover-title">شهد</h1>
+            <div class="cover-decoration">♥️</div>
+            <p class="cover-verse">"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
+              إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"</p>
+          </div>
+        </div>
+        <!-- Pages will be generated by JS -->
+      </div>
+      <div class="book-controls">
+        <button onclick="prevPage()">السابق</button>
+        <button onclick="nextPage()">التالي</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/images.js"></script>
   <script src="script.js"></script>
 </body>
 
