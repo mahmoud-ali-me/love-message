@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahmoud & Shahd - أجمل تاريخ في الدنيا</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Floating Hearts Background -->
+  <div class="hearts-container" id="heartsContainer"></div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header with Names -->
+    <div class="names-section">
+      <div class="name-box animate-fade-in">
+        <h1 class="name">Mahmoud</h1>
+      </div>
+      <div class="heart-divider">
+        <span class="big-heart">❤️</span>
+      </div>
+      <div class="name-box animate-fade-in delay-1">
+        <h1 class="name">Shahd</h1>
+      </div>
+    </div>
+
+    <!-- Special Date -->
+    <div class="date-section animate-fade-in delay-2">
+      <div class="date-label">اليوم الذي غيّر حياتي</div>
+      <div class="special-date">28 / 11 / 2024</div>
+    </div>
+
+    <!-- Love Message -->
+    <div class="message-section animate-fade-in delay-3">
+      <div class="message-card">
+        <div class="message-icon">💕</div>
+        <p class="message-text">
+          في هذا اليوم المميز، بدأت قصة حب لا تُنسى...<br>
+          يوم غيّر كل شيء وجعل الحياة أجمل<br>
+          معكِ كل لحظة هي ذكرى ثمينة<br>
+          وكل يوم هو بداية جديدة مليئة بالحب والسعادة
+        </p>
+        <div class="message-signature">
+          <span class="signature-text">بكل الحب،</span>
+          <span class="signature-name">Mahmoud</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section animate-fade-in delay-4">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">
+        أنتِ السبب في كل ابتسامة<br>
+        وأنتِ البداية الجميلة لكل يوم
+      </p>
+      <div class="quote-mark closing">"</div>
+    </div>
+
+    <!-- Envelope Section with Arrow -->
+    <div class="envelope-section animate-fade-in delay-5">
+      <!-- Animated Arrow Pointer -->
+      <div class="arrow-pointer" id="arrowPointer">
+        <svg width="60" height="60" viewBox="0 0 60 60">
+          <path d="M30 5 L30 40 M30 40 L20 30 M30 40 L40 30" stroke="url(#arrowGradient)" stroke-width="3.5" fill="none"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <defs>
+            <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="arrow-text">اضغط على الظرف ♥️</div>
+      </div>
+
+      <!-- Envelope Icon -->
+      <div class="envelope-wrapper" onclick="openEnvelope()">
+        <div class="envelope" id="envelope">
+          <div class="envelope-back"></div>
+          <div class="envelope-flap" id="envelopeFlap">
+            <div class="envelope-seal">
+              <span class="seal-heart">💕</span>
+            </div>
+          </div>
+          <div class="envelope-front"></div>
+          <div class="envelope-body"></div>
+        </div>
+        <div class="envelope-label">رسالة خاصة جداً</div>
+      </div>
+    </div>
+
+    <!-- Interactive Hearts Button -->
+    <div class="interaction-section animate-fade-in delay-6">
+      <button class="hearts-button" onclick="createHeartExplosion()">
+        <span class="button-icon">💖</span>
+        <span class="button-text">اضغط هنا</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Letter Modal -->
+  <div class="letter-modal" id="letterModal">
+    <div class="letter-overlay" onclick="closeLetter()"></div>
+    <div class="letter-container">
+      <div class="letter-content">
+        <button class="close-letter" onclick="closeLetter()">
+          <span>✕</span>
+        </button>
+
+        <div class="letter-header">
+          <h1 class="letter-title">💕 رسالة حب خاصة 💕</h1>
+          <div class="letter-date">28 نوفمبر 2024</div>
+        </div>
+
+        <div class="letter-body">
+          <p class="letter-paragraph">
+            🥹♥️ والله النهرده أجمل يوم في حياتي بجد ♥️🌹🥹🌸 انا بحب اليوم دا اوي ♥️🌺😍🌼🌷 دا هو دا اليوم ال حصل فيه
+            اهم حدث في حياتي ♥️🥹💐🌹 و هو سبب فرحتي في الدنيا حرفيا ♥️🌸🥰🌺 هو دا اليوم ال اتولدت فيه من جديد ♥️🥹🌼🌷
+            انتي مش متخيله اليوم دا عندي احساسه عامل ازاي ♥️🌹🥹🌸🌺 دا هو دا اليوم ال دخلت فيه الورده ال نورت حياتي و
+            قلبي و روحي ♥️🌹🌹🥹🌸🌺🌼💐
+          </p>
+
+          <p class="letter-paragraph highlight">
+            كل سنه وانتي طيبه يا اجمل بنت خلقها ربي ♥️🥹🌸🌺🌼💐😍 و جعلها من نصيبي ♥️🌷🥹🌹
+          </p>
+
+          <p class="letter-paragraph">
+            كل سنه وانتي بنتي و روحي و امي و حببتي و صحبتي ♥️🥹🌸🌺🌼💐 كل سنه واحنا مع بعض مكملين طريقنا و مبسوطين
+            ♥️🥹🌸🌺🌷😂 كل سنه و انتي منوره حياتي و دنيتي و قلبي ♥️🥹🌸🌺🌼💐🌷 كل سنه وانتي حياتي كلها ♥️🥹🌸🌺🌼😍
+          </p>
+
+          <p class="letter-paragraph">
+            كل سنه وانا بحبك فيها في كل ثانيه اكتر من البعدها ♥️🥹🌸🌺🌼💐 كل سنه وانتي ساكنه جوه روحي ياروحي
+            ♥️🥹🌸🌺🌼🌷🌝 كل سنه وانتي مهونه عليا كل مشكال الدنيا ♥️🥹🌸🌺💐🌹
+          </p>
+
+          <p class="letter-paragraph">
+            كل سنه وانا حاسس اني معايه الكون كله علشان منوره حياتي احن بنت في الدنيا ♥️🥹🌸🌺🌼🌷😍 كل سنه وانا عمري ما
+            زعلت منك في يوم ولا عمري هزعل من بنتي في يوم ♥️🥹🌸🌺🌼😂 كل سنه وانتي مستحملاني بكل حلاتي و في كل أوقاتي
+            ♥️🥹🌸🌺🌼💐🌷
+          </p>
+
+          <p class="letter-paragraph highlight">
+            كل سنه و ربنا يحفظك ويخليكي ليا انا يا نور عيني ♥️🥹🌸🌺🌼🌹💐 كل سنه وربنا يباركلي في دنيتي و آخرتي بيكي
+            ♥️🥹🌸🌺🌼💐🌷
+          </p>
+
+          <p class="letter-paragraph">
+            كل سنه وربنا يكرمني و اجبلك خير الدنيا كله تحت رجلك يا روح قلبي انتي ♥️🥹🌸🌺🌼💐🌹 والله العظيم الهديه ال
+            ربنا زرع في قلبي حبك و اختم عليه ♥️🥹🌺🌸🌼🌷 يعني حبك عمره ما هيطلع ولا يدخل عليه حب غير حبك ♥️🥹🌸🌺🌼💐🌷
+          </p>
+
+          <p class="letter-paragraph">
+            يعني كل ثانيه كدا بتعدي قلبي بيلاقي حب جديد داخله يقله مين ♥️🥹🌸🌺🌼🌹 يقله شهوده افتح انا داخله اذود الحب
+            ال جوه ♥️🥹🌸🌺🌼🌷💐
+          </p>
+
+          <p class="letter-paragraph">
+            كل سنه وانا متعلق بيكي زي الطفل ال متشعلق في امه علشان هي مصدر الأمان لقلبه ♥️🥹🌸🌺🌼💐🌹 كل سنه وانتي طيبة
+            و بخير و متفوقه دايما في مجالك ♥️🥹🌸🌺🌼💐🌷😍
+          </p>
+
+          <p class="letter-paragraph highlight">
+            كل سنه و انتي اشطر دكتوره في الدينا كلها ♥️🥹🌸🌺🌼🌹💐 ربنا يجعلك دايما سبب في اكتشاف أمراض الناس
+            ♥️🥹🌸🌺💐🌼 و يجعلك سبب في علاجهم ♥️🥹🌸🌺🌷🌝
+          </p>
+
+          <p class="letter-paragraph">
+            و دايما يارب نحقق احلامنا كلها مع بعض ياروح قلبي و نور عيني ♥️🥹🌸🌺🌼💐😂 كل سنه وانتي دكتوره قلبي يا قلبي
+            انا ♥️🥹🌸🌺🌼🌹🌷
+          </p>
+
+          <p class="letter-paragraph">
+            كل سنه وانت بنظره واحده منك بتوقعني و بتفهميني يا ام أجمل عيون في الكون انت يا قمر ♥️🥹🌸🌺🌼🌷🌝 كل سنه
+            وانتي انا و انا انتي ♥️🥹🌸🌺💐🌷
+          </p>
+
+          <p class="letter-paragraph highlight final-wish">
+            و يارب نحتفل باليوم دا السنه الجايه في بيتنا يارب يا شهوده قلبي ♥️🥹🌸🌺🌼🌹💐🌷 و السنه ال بعدها نحتفل بعيد
+            جوازنا انا وانتي و شهد الصغننه يا ام شهد ♥️🥹🌸🌺🌼💐🌷🌹
+          </p>
+
+          <div class="hearts-line">
+            ♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️
+          </div>
+        </div>
+
+        <div class="letter-footer">
+          <div class="signature-full">
+            <span class="signature-text-full">بكل الحب والشوق،</span>
+            <span class="signature-name-full">Mahmoud ♥️</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
