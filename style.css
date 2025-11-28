@@ -646,6 +646,7 @@ body {
   top: 0;
   left: 0;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -653,21 +654,21 @@ body {
   padding: 20px;
   background: url('https://www.transparenttextures.com/patterns/cream-paper.png'), #fff;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.03);
-  /* Lighter inner shadow */
+  /* Fix Z-Fighting: Lift content slightly off the base plane */
 }
 
 .page-front {
   z-index: 2;
-  transform: rotateY(0deg);
+  /* Lift front page slightly forward */
+  transform: rotateY(0deg) translateZ(1px);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  /* Spine shadow */
 }
 
 .page-back {
   z-index: 1;
-  transform: rotateY(180deg);
+  /* Lift back page slightly forward (in its local space) */
+  transform: rotateY(180deg) translateZ(1px);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
-  /* Spine shadow */
 }
 
 /* Photo Frame Style */
@@ -708,7 +709,6 @@ body {
 /* Navigation Arrows - Fixed to Screen Edges */
 .nav-arrow {
   position: fixed;
-  /* Changed from absolute to fixed */
   top: 50%;
   transform: translateY(-50%);
   width: 60px;
@@ -721,9 +721,12 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 2000;
-  /* Ensure above everything */
   color: #ffd700;
   font-size: 2.5rem;
+  line-height: 1;
+  /* Fix vertical alignment */
+  padding-bottom: 4px;
+  /* Visual correction */
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 215, 0, 0.3);
